@@ -105,11 +105,11 @@ window#waybar.hidden {
 }
 
 #wireplumber {
-	background-color: #59839F;
+	background-color: #cdd6f4;
 }
 
 #network {
-	background-color: #B67835;
+	background-color: #6692AC;
 	padding-right: 17px;
 }
 
@@ -119,11 +119,11 @@ window#waybar.hidden {
 }
 
 #custom-power {
-	background-color: #6C90A5;
+	background-color: #cdd6f4;
 }
 
 #custom-keyboard-layout {
-	background-color: #6C90A5;
+	background-color: #fab387;
 }
 
 #power-profiles-daemon {
