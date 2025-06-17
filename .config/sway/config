@@ -218,7 +218,8 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym Print exec $screenshot
+    bindsym $mod+Shift+s exec $screenshot
 
 #
 # Status Bar:
@@ -261,12 +262,12 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 default_border pixel 2
 
-gaps inner 10
+gaps inner 8
 # gaps inner all set 10
 
 bindsym $mod+u exec $lock
 
-set $cl_high #009ddc
+set $cl_high #cdd6f4
 set $cl_indi #d9d8d8
 set $cl_back #231f20
 set $cl_fore #d9d8d8
@@ -277,3 +278,5 @@ client.focused          $cl_high $cl_high $cl_fore $cl_indi $cl_high
 client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
+
+for_window [app_id="nmwui"] floating enable, resize set 800 600
