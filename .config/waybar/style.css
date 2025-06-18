@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-	background-color: #161617;
+	background-color: rgb(22, 22, 23);
 	color: #c9c7cd;
 	transition-property: background-color;
 	transition-duration: 0.5s;
@@ -83,7 +83,7 @@ window#waybar.hidden {
 
 #custom-power {
 	margin-right: 6px;
-	background-color: #3C3B3E;
+	/* background-color: #3C3B3E; */
 }
 
 #custom-logo {
@@ -132,6 +132,7 @@ window#waybar.hidden {
 	font-family: JetBrainsMono Nerd Font;
 	/* background-color: #e6b99d; */
 	background-color: #3C3B3E;
+	color: #e3e2e5;
 }
 
 #custom-power {

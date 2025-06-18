@@ -38,9 +38,6 @@ alias ll="ls -la"
 # Print my public IP
 alias myip='curl ipinfo.io/ip'
 
-# vim as Neovim
-alias vim='nvim'
-
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
 }
@@ -48,8 +45,8 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
-export PS1='\[\e[32;1m\]\A\[\e[0m\] \[\e[34;1m\]\w\[\e[0;32;2m\] $(parse_git_branch)\[\e[0m\]\\$'
-
+# export PS1='\[\e[32;1m\]\A\[\e[0m\] \[\e[34;1m\]\w\[\e[0;32;2m\] $(parse_git_branch)\[\e[0m\]\\$'
+PROMPT_COMMAND='PS1_CMD1=$(parse_git_branch)'; PS1=' \[\e[32m\]\w\[\e[2m\] \[\e[0;91m\]${PS1_CMD1}\[\e[0m\]\\$'
 export PATH=$PATH:/home/andres/.spicetify
 
 alias spotify='flatpak run com.spotify.Client'
