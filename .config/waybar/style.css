@@ -4,10 +4,12 @@
 	min-height: 0;
 	font-family: JetBrainsMono Nerd Font;
 	font-size: 13px;
+	/* color: #c9c7cd; */
 }
 
 window#waybar {
 	background-color: #161617;
+	color: #c9c7cd;
 	transition-property: background-color;
 	transition-duration: 0.5s;
 }
@@ -30,21 +32,19 @@ window#waybar.hidden {
 	padding: 6px 18px;
 	margin: 6px 3px;
 	border-radius: 4px;
-	/* background-color: #27272a; */
-	color: #cdd6f4;
+	color: #c9c7cd;
 }
 
 #workspaces button.focused {
-	color: #1e1e2e;
-	background-color: #cdd6f4;
-
+	color: #e3e2e5;
+	background-color: #3C3B3E;
 }
 
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #1e1e2e;
-	background-color: #cdd6f4;
+	color: #161617;
+	background-color: #c9c7cd;
 }
 
 #workspaces button.urgent {
@@ -64,12 +64,26 @@ window#waybar.hidden {
 	border-radius: 4px;
 	margin: 6px 3px;
 	padding: 6px 12px;
-	background-color: #353539;
-	color: #161617;
+	/* background-color: #3C3B3E; */
+	color: #c9c7cd;
+}
+
+#memory:hover,
+#custom-power:hover,
+#custom-keyboard-layout:hover,
+#battery:hover,
+#backlight:hover,
+#wireplumber:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#clock:hover,
+#tray:hover {
+	background-color: #3C3B3E;
 }
 
 #custom-power {
 	margin-right: 6px;
+	background-color: #3C3B3E;
 }
 
 #custom-logo {
@@ -82,17 +96,17 @@ window#waybar.hidden {
 }
 
 #memory {
-	background-color: #e6b99d;
+	/* background-color: #e6b99d; */
 }
 
 #battery {
-	background-color: #90b99f;
+	/* background-color: #90b99f; */
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-	background-color: #ff0000;
+	background-color: #f5a191;
 	color: #FFFF00;
 }
 
@@ -102,33 +116,34 @@ window#waybar.hidden {
 }
 
 #backlight {
-	background-color: #f5a191;
+	/* background-color: #f5a191; */
 }
 
 #wireplumber {
-	background-color: #cdd6f4;
+	/* background-color: #cdd6f4; */
 }
 
 #network {
-	background-color: #cdd6f4;
+	/* background-color: #cdd6f4; */
 	padding-right: 17px;
 }
 
 #clock {
 	font-family: JetBrainsMono Nerd Font;
-	background-color: #e6b99d;
+	/* background-color: #e6b99d; */
+	background-color: #3C3B3E;
 }
 
 #custom-power {
-	background-color: #cdd6f4;
+	/* background-color: #cdd6f4; */
 }
 
 #custom-keyboard-layout {
-	background-color: #e6b99d;
+	/* background-color: #e6b99d; */
 }
 
 #power-profiles-daemon {
-	background-color: #90b99f;
+	/* background-color: #90b99f; */
 }
 
 
