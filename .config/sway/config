@@ -17,7 +17,12 @@ set $right l
 set $term kitty
 # Your preferred application launcher
 set $menu fuzzel --width=50 --line-height=28
-set $screenshot grim ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+
+## Save screenshot over whole screen
+# set $screenshot grim ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
+
+## Screenshot area and copy to clipboard
+set $screenshot grimshot copy area
 
 set $lock ~/.local/bin/scripts/lock.sh
 set $powermenu ~/.local/bin/scripts/power-menu.sh
@@ -94,6 +99,9 @@ output eDP-1 resolution 3840x2160
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # colorpicker
+    bindsym $mod+Shift+o exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
 #
 # Moving around:
 #
@@ -280,3 +288,4 @@ client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 for_window [app_id="nmwui"] floating enable, resize set 800 600
+
