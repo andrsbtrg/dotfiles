@@ -1,11 +1,16 @@
 daemonize
 
+image=~/Pictures/Wallpapers/map_gray_small.png
+
+font=JetBrainsMono
+font-size=40
+
 ignore-empty-password
 
 color=1d1f21
 indicator-idle-visible
-indicator-radius=150
-indicator-thickness=30
+indicator-radius=120
+indicator-thickness=20
 
 inside-color=1d1f21
 inside-clear-color=1d1f21
