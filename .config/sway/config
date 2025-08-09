@@ -18,6 +18,8 @@ set $term kitty
 # Your preferred application launcher
 set $menu fuzzel --width=50 --line-height=28
 
+set $calc exec ./calc.sh
+
 ## Save screenshot over whole screen
 # set $screenshot grim ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
@@ -33,6 +35,12 @@ bindsym $mod+Shift+p exec $powermenu
 
 # Open file manager
 bindsym $mod+z exec $filemanager
+
+for_window [app_id="termfloat"] floating enable
+for_window [app_id="termfloat"] resize set height 500
+for_window [app_id="termfloat"] resize set width 900
+
+bindsym $mod+d exec kitty --class="termfloat" bc -q -i -l
 
 ### Output configuration
 #
@@ -85,7 +93,7 @@ output eDP-1 resolution 3840x2160
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -174,7 +182,7 @@ output eDP-1 resolution 3840x2160
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    # bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
