@@ -18,13 +18,11 @@ set $term kitty
 # Your preferred application launcher
 set $menu fuzzel --width=50 --line-height=28
 
-set $calc exec ./calc.sh
-
 ## Save screenshot over whole screen
 # set $screenshot grim ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
 ## Screenshot area and copy to clipboard
-set $screenshot grimshot copy area
+set $screenshot grimshot save area ~/Pictures/Screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 
 set $lock ~/.local/bin/scripts/lock.sh
 set $powermenu ~/.local/bin/scripts/power-menu.sh
@@ -37,10 +35,12 @@ bindsym $mod+Shift+p exec $powermenu
 bindsym $mod+z exec $filemanager
 
 for_window [app_id="termfloat"] floating enable
-for_window [app_id="termfloat"] resize set height 500
-for_window [app_id="termfloat"] resize set width 900
+for_window [app_id="termfloat"] resize set height 800
+for_window [app_id="termfloat"] resize set width 960
 
 bindsym $mod+d exec kitty --class="termfloat" bc -q -i -l
+
+bindsym $mod+t exec kitty --class="termfloat" vi ~/todo.txt
 
 ### Output configuration
 #
@@ -278,14 +278,14 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 default_border pixel 2
 
-gaps inner 8
+gaps inner 0
 # gaps inner all set 10
 
 bindsym $mod+u exec $lock
 
-set $cl_high #cdd6f4
+set $cl_high #3C3B3E
 set $cl_indi #d9d8d8
-set $cl_back #231f20
+set $cl_back #161617
 set $cl_fore #d9d8d8
 set $cl_urge #ee2e24
 
