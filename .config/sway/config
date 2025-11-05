@@ -278,7 +278,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 default_border pixel 2
 
-gaps inner 0
+gaps inner 10
 # gaps inner all set 10
 
 bindsym $mod+u exec $lock
@@ -296,4 +296,15 @@ client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 for_window [app_id="nmwui"] floating enable, resize set 800 600
+
+# swayfx
+
+smart_corner_radius on
+corner_radius 8
+# default_dim_inactive 0.05
+blur enable
+blur_passes 2
+blur_radius 2
+# shadows on
+# shadow_blur_radius 20
 

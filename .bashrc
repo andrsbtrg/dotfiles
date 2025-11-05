@@ -46,7 +46,7 @@ function parse_git_branch {
 }
 
 # export PS1='\[\e[32;1m\]\A\[\e[0m\] \[\e[34;1m\]\w\[\e[0;32;2m\] $(parse_git_branch)\[\e[0m\]\\$'
-PROMPT_COMMAND='PS1_CMD1=$(parse_git_branch)'; PS1=' \[\e[32m\]\w\[\e[2m\] \[\e[0;91m\]${PS1_CMD1}\[\e[0m\]\\$'
+PROMPT_COMMAND='PS1_CMD1=$(parse_git_branch)'; PS1=' \w\[\e[32;2m\] \[\e[0m\]${PS1_CMD1}\\$'
 export PATH=$PATH:/home/andres/.spicetify
 
 alias spotify='flatpak run com.spotify.Client'
